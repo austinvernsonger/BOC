@@ -1,0 +1,189 @@
+.mapWrapper {
+	margin:0 auto;
+	position:relative;
+}
+
+#map {
+	float:left;
+	clear:both;
+}
+
+#debugInfo{
+	position: fixed;
+    top: 10px;
+    right: 50px;
+}
+
+#comarcaName h1{
+    font-family: 'Myriad-Pro', 'Myriad', helvetica, arial, sans-serif;
+    font-style:normal;   
+    letter-spacing: -1px;
+    padding: 0;
+}
+
+#infoEdifici{
+ 	/* Size and position */
+    margin: 0 auto;
+    padding: 0;
+
+    /* Font settings */
+    font-weight: bold;
+    color: #8AA8BD;
+}
+
+body {
+	background: #fff;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	text-align: center;
+	color: #5554;
+}
+h1 {
+	font-size: 16px;
+	padding: 30px 0 10px;
+}
+p {
+	padding-bottom: 30px;
+}
+
+a {
+	color: #66bbdd;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+
+#container {
+	margin:10px auto;
+
+}
+
+.description {
+	margin-left: auto; 
+	margin-right: auto; 
+	width: 99%; 
+}
+
+.description strong {
+	padding: 5px;
+}
+
+.tabs input[type=radio] {
+          position: absolute;
+          top: -9999px;
+          left: -9999px;
+      }
+      .tabs {
+        max-width: 600px;
+        width:100%;
+        float: none;
+        list-style: none;
+        position: relative;
+        padding: 0;
+        margin: 10px auto;
+      }
+      .tabs li{
+        float: left;
+      }
+.tabs label {
+          display: block;
+          padding: 20px 20px;
+          border-radius: 1px 1px 0 0;
+          color: #08C;
+          font-size: 8px;
+          font-weight: bold;
+  
+      font-family: verdana, helveti;
+          background: rgba(255,255,255,0.2);
+          cursor: pointer;
+          position: relative;
+          top: 2px;
+
+      }
+      .tabs label:hover {
+        background: rgba(255,255,255,0.5);
+        top: 0;
+      }
+       
+      [id^=tab]:checked + label {
+        background: #08C;
+        color: white;
+        top: 0;
+      }
+       
+      [id^=tab]:checked ~ [id^=tab-content] {
+          display: block;
+      }
+      .tab-content{
+        z-index: 2;
+        display: none;
+        text-align: left;
+        width: 100%;
+        font-size: 10px;
+        line-height: 140%;
+        padding-top: 10px;
+        background: #e5e5e5;
+        padding: 5px;
+        color: #222;
+        position: absolute;
+        top: 45px;
+        left: 0;
+        box-sizing: border-box;
+      }
+	  
+	  
+	  
+	  
+.info{
+   display: none;
+   margin-top: 5px;
+
+	float:right;
+	width:480px;
+	height:400px;
+	overflow: auto;
+
+ 	/* Size and position */
+    padding: 0px;
+
+    /* Styles */
+    background: #fff;
+    border-radius: 3px;
+    border: 2px solid rgba(0,0,0,0.15);
+    box-shadow: 0 1px 1px rgba(50,50,50,0.1);
+    cursor: pointer;
+    outline: none;
+
+    /* Font settings */
+    font-weight: normal;
+    color: black;
+}
+
+.llistat-edificis {
+	padding: 0;
+    margin: 0px;
+
+    /* Styles */
+    background: white;
+    font-weight: normal;
+    list-style: none;
+
+    /* Hiding */
+    pointer-events: none;
+}
+
+.llistat-edificis li a {
+    display: block;
+    padding: 2px;
+    width: 100%;
+    text-align: left;
+    margin-left: 5px;
+    text-decoration: none;
+    color: #8aa8bd;
+}
+
+.llistat-edificis li i {
+   float: right;
+   color: inherit;
+   margin-right: 15px;
+}
