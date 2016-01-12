@@ -141,7 +141,7 @@ a:hover {
 	float:right;
 	width:480px;
 	height:400px;
-	overflow: auto;
+	/*overflow: auto;*/
 
  	/* Size and position */
     padding: 0px;
@@ -169,7 +169,7 @@ a:hover {
     list-style: none;
 
     /* Hiding */
-    pointer-events: none;
+    pointer-events: auto;
 }
 
 .llistat-edificis li a {
@@ -186,4 +186,8 @@ a:hover {
    float: right;
    color: inherit;
    margin-right: 15px;
+}
+
+iframe {
+    overflow-x:hidden;
 }
