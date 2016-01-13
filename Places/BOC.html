@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+        <meta charset="utf-8">
+        <link href="css/main.css" media="screen,projection" rel="stylesheet" type="text/css">
+        <link href="css/jquery-ui.css" rel="stylesheet">
+        <script src="js/jquery-1.12.0.js">
+        </script>
+        <script src="js/jquery-ui.js">
+        </script>
+        <script src="js/jquery.min.js">
+        </script>
+        <style media="screen" type="text/css">
+                .top{
+                background-color: #1a237e;
+                bottom: 2em;
+                color: #fff;
+                display: none;
+                opacity:1.0;
+                padding: 1.5em;
+                position: fixed;
+                right: 1.5em;
+                text-decoration: none;
+                }
+                .top:hover{
+                opacity:1;
+                transition:1s;
+                }
+                footer{
+                text-align:center;
+                padding-bottom:15px;
+                }
+        </style><!--Import materialize.css-->
+        <link href="css/materialize.min.css" media="screen,projection" rel="stylesheet" type="text/css"><!--Let browser know website is optimized for mobile-->
+
+        <script>
+
+                $(document).ready(function() {
+                var offset=250, // At what pixels show Back to Top Button
+                scrollDuration=300; // Duration of scrolling to top
+                $(window).scroll(function() {
+                if ($(this).scrollTop() > offset) {
+                $('.top').fadeIn(100); // Time(in Milliseconds) of appearing of the Button when scrolling down.
+                } else {
+                $('.top').fadeOut(500); // Time(in Milliseconds) of disappearing of Button when scrolling up.
+                }
+                });
+                // Smooth animation when scrolling
+                $('.top').click(function(event) {
+                event.preventDefault();
+                $('html, body').animate({
+                scrollTop: 0}, scrollDuration);
+                })
+                });
+        </script>
+</head>
+
+<body>
+        <header>
+                <nav class="top-nav indigo darken-4">
+                        <div class="container">
+                                <div class="nav-wrapper">
+                                        <a class="page-title"></a>
+                                </div>
+                        </div>
+
+
+                        <center>
+                                <h4>Board of Councils</h4>
+                        </center>
+                </nav>
+        </header>
+        <!--
+================================================ 
+            MEMBERS:  
+================================================ -->
+        <script>
+                $(document).ready(function(){
+                $('ul.tabs').tabs();
+                });
+        </script>
+
+	<div class="info" id="eoa">	
+		<div id="comarcaName"></div>
+		<div id="contentText"><div id="infoEdifici">
+             <div style="height: 400px; width: 300px"
+
+            
+            
+            
+            
+        </div></div>
+     </div>
+        <footer>
+                <a class="top" href="#">&uarr;</a>
+        </footer>
+</body>
+</html>
