@@ -1,814 +1,706 @@
 <!DOCTYPE html>
-<html dir="ltr" lang="en-US">
-
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml" dir="ltr">
 <head>
-    <title>AAOS BOC Map</title>
-    <meta charset="utf-8">
-    <script src="js/jquery.min.js">
-    </script>
-    <script src="js/highmaps.js" type="text/javascript">
-    </script>
-    <script charset="utf-8" src="js/map.js" type="text/javascript">
-    </script>
-    <link href="css/main.css" rel="stylesheet">
-    <!--Import Google Icon Font-->
-    <!-- <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
-    <!--Import materialize.css-->
-    <!-- <link href="css/materialize.min.css" media="screen,projection" rel="stylesheet" type="text/css"> -->
-    <!--Let browser know website is optimized for mobile-->
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <script>
-        $(document).ready(function() {
-            $('.collapsible').collapsible({
-                accordion: false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
-            });
-        });
-    </script>
+	<title>AAOS BOC Map</title>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/highmaps.js"></script>
+	<script type="text/javascript" src="js/map.js" charset="utf-8"></script>
+	<link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
-    <div style="margin:0px auto; width:1000px;">
-        <svg style="width:737px;">
-            <rect fill="#CCCCCC" height="42.557" id="rect1" stroke="#003F7F" stroke-width="5" width="127.71" x="31.462" y="13.583">
-            </rect>
-            <text enable-background="new" id="text1" transform="matrix(0.8733 0 0 1 39.3115 31.6865)">
-                <tspan font-family="'TimesNewRomanPS-BoldMT'" font-size="12.9374" x="0" y="0">
-                    Canadian Orthopaedic
-                </tspan>
-                <tspan font-family="'TimesNewRomanPS-BoldMT'" font-size="12.9374" x="31.812" y="15.525">
-                    Association
-                </tspan>
-            </text>
-            <rect fill="#CCCCCC" height="42.557" id="rect2" stroke="#003F7F" stroke-width="5" width="127.71" x="222.497" y="12.105">
-            </rect>
-            <text enable-background="new" id="text2" transform="matrix(0.8733 0 0 1 237.5586 29.6865)">
-                <tspan font-family="'TimesNewRomanPS-BoldMT'" font-size="12.9374" x="0" y="0">
-                    Eastern Orthopaedic
-                </tspan>
-                <tspan font-family="'TimesNewRomanPS-BoldMT'" font-size="12.9374" x="28.026" y="15.525">
-                    Association
-                </tspan>
-            </text>
-            <rect fill="#CCCCCC" height="42.557" id="rect3" stroke="#003F7F" stroke-width="5" width="127.711" x="414.646" y="11.891">
-            </rect>
-            <text font-family="'TimesNewRomanPS-BoldMT'" font-size="12.9374" id="text3" transform="matrix(0.798 0 0 1 420.3076 29.4868)">
-                <tspan font-family="'TimesNewRomanPS-BoldMT'" font-size="12.9374" x="0" y="0">
-                    Mid-America Orthopaedic
-                </tspan>
-                <tspan font-family="'TimesNewRomanPS-BoldMT'" font-size="12.9374" x="28.026" y="15.525">
-                    Association
-                </tspan>
-            </text>
-            <rect fill="#CCCCCC" height="42.557" id="rect4" stroke="#003F7F" stroke-width="5" width="127.711" x="603.927" y="12.769">
-            </rect>
-            <text enable-background="new" id="text4" transform="matrix(0.8733 0 0 1 624.2012 29.6865)">
-                <tspan font-family="'TimesNewRomanPS-BoldMT'" font-size="12.9374" x="0" y="0">
-                    Society of Military
-                </tspan>
-                <tspan font-family="'TimesNewRomanPS-BoldMT'" font-size="12.9374" x="-10.622" y="15.525">
-                    Orthopaedic Surgeons
-                </tspan>
-            </text>
-            <rect fill="#CCCCCC" height="42.557" id="rect5" stroke="#003F7F" stroke-width="5" width="127.71" x="126.628" y="77.699">
-            </rect>
-            <text enable-background="new" id="text5" transform="matrix(0.8733 0 0 1 136.3423 95.5254)">
-                <tspan font-family="'TimesNewRomanPS-BoldMT'" font-size="12.9374" x="0" y="0">
-                    Southern Orthopaedic
-                </tspan>
-                <tspan font-family="'TimesNewRomanPS-BoldMT'" font-size="12.9374" x="30.369" y="15.525">
-                    Association
-                </tspan>
-            </text>
-            <rect fill="#CCCCCC" height="42.557" id="rect6" stroke="#003F7F" stroke-width="5" width="127.711" x="511.727" y="75.247">
-            </rect>
-            <text enable-background="new" id="text6" transform="matrix(0.8733 0 0 1 523.1768 92.6558)">
-                <tspan font-family="'TimesNewRomanPS-BoldMT'" font-size="12.9374" x="0" y="0">
-                    Western Orthopaedic
-                </tspan>
-                <tspan font-family="'TimesNewRomanPS-BoldMT'" font-size="12.9374" x="28.199" y="15.525">
-                    Association
-                </tspan>
-            </text>
-        </svg>
-        <div id="container" style="width:500px; height:450px; float: left"></div>
-        <div style="float: right; width: 300px">
-            <div class="info" id="maininfo" style="display: block">
-				<div id="comarcaName"><h6>Board of Councilors</h6></div>
-				<div id="contentText">
+<div style="margin:0px auto; width:1000px;">
+<svg style="width:737px;">
+	<rect id="rect1" x="31.462" y="13.583" fill="#CCCCCC" stroke="#003F7F" stroke-width="5" width="127.71" height="42.557"/>
+	<text id="text1" transform="matrix(0.8733 0 0 1 39.3115 31.6865)" enable-background="new    "><tspan x="0" y="0" font-family="'TimesNewRomanPS-BoldMT'" font-size="12.9374">Canadian Orthopaedic</tspan><tspan x="31.812" y="15.525" font-family="'TimesNewRomanPS-BoldMT'" font-size="12.9374">Association</tspan></text>
 
-<p>Each orthopaedic surgeon who serves on the Board of Councilors acts as your representative and liaison to the Academy. A Councilor's goal is to represent your opinions, ideas, suggestions, and seek input on issues that affect orthopaedic surgeons and their patients. Each Councilor is responsible for taking comments and suggestions and presenting them at one of their three meetings and encouraging the Academy to take action.</p>
 
-<p>The Board of Councilors has played active roles in encouraging the Academy to pursue public advocacy efforts and have help to refine the algorithms review process allowing more input and comments on the algorithms. Your Councilor needs input on issues that are important to you. Without input and participation from the fellows, there is no guarantee that your voice will be heard.</P></div>
+	<rect id="rect2" x="222.497" y="12.105" fill="#CCCCCC" stroke="#003F7F" stroke-width="5" width="127.71" height="42.557"/>
+	<text id="text2" transform="matrix(0.8733 0 0 1 237.5586 29.6865)" enable-background="new    ">
+	   <tspan x="0" y="0" font-family="'TimesNewRomanPS-BoldMT'" font-size="12.9374">Eastern Orthopaedic </tspan><tspan x="28.026" y="15.525" font-family="'TimesNewRomanPS-BoldMT'" font-size="12.9374">Association</tspan>
+	</text>
+
+	<rect id="rect3" x="414.646" y="11.891" fill="#CCCCCC" stroke="#003F7F" stroke-width="5" width="127.711" height="42.557"/>
+	<text id="text3" transform="matrix(0.798 0 0 1 420.3076 29.4868)" font-family="'TimesNewRomanPS-BoldMT'" font-size="12.9374">
+		<tspan x="0" y="0" font-family="'TimesNewRomanPS-BoldMT'" font-size="12.9374">Mid-America Orthopaedic</tspan><tspan x="28.026" y="15.525" font-family="'TimesNewRomanPS-BoldMT'" font-size="12.9374">Association</tspan>
+	</text>
+
+	<rect id="rect4" x="603.927" y="12.769" fill="#CCCCCC" stroke="#003F7F" stroke-width="5" width="127.711" height="42.557"/>
+	<text id="text4" transform="matrix(0.8733 0 0 1 624.2012 29.6865)" enable-background="new    ">
+	    <tspan x="0" y="0" font-family="'TimesNewRomanPS-BoldMT'" font-size="12.9374">Society of Military</tspan><tspan x="-10.622" y="15.525" font-family="'TimesNewRomanPS-BoldMT'" font-size="12.9374">Orthopaedic Surgeons</tspan>
+	</text>
+
+	<rect id="rect5" x="126.628" y="77.699" fill="#CCCCCC" stroke="#003F7F" stroke-width="5" width="127.71" height="42.557"/>
+	<text id="text5" transform="matrix(0.8733 0 0 1 136.3423 95.5254)" enable-background="new    ">
+	    <tspan x="0" y="0" font-family="'TimesNewRomanPS-BoldMT'" font-size="12.9374">Southern Orthopaedic</tspan><tspan x="30.369" y="15.525" font-family="'TimesNewRomanPS-BoldMT'" font-size="12.9374">Association</tspan>
+	</text>
+
+	<rect id="rect6" x="511.727" y="75.247" fill="#CCCCCC" stroke="#003F7F" stroke-width="5" width="127.711" height="42.557"/>
+	<text id="text6" transform="matrix(0.8733 0 0 1 523.1768 92.6558)" enable-background="new    ">
+	    <tspan x="0" y="0" font-family="'TimesNewRomanPS-BoldMT'" font-size="12.9374">Western Orthopaedic</tspan><tspan x="28.199" y="15.525" font-family="'TimesNewRomanPS-BoldMT'" font-size="12.9374">Association</tspan>
+	</text>
+</svg>
+<script>
+    function clear(){
+		$(".info").css("display", "none")
+	}
+
+// for block Canadian Orthopaedic Association
+   $('#text1').click(function(){
+	   clear();
+	   $("#coa").css("display", "block");
+	});
+	$('#rect1').click(function(){
+	   clear();
+	   $("#coa").css("display", "block");
+	});
+
+//Eastern Orthopaedic Association
+	$('#text2').click(function(){
+	   clear();
+	   $("#eoa").css("display", "block");
+	});
+	$('#rect2').click(function(){
+	   clear();
+	   $("#eoa").css("display", "block");
+	});
+
+//Mid-America Orthopaedic Association
+	$('#text3').click(function(){
+	   clear();
+	   $("#maoa").css("display", "block");
+	});
+	$('#rect3').click(function(){
+	   clear();
+	   $("#maoa").css("display", "block");
+	});
+
+//Society of Military Orthopaedic Surgeons
+	$('#text4').click(function(){
+	   clear();
+	   $("#smos").css("display", "block");
+	});
+	$('#rect4').click(function(){
+	   clear();
+	   $("#smos").css("display", "block");
+	});
+
+//Southern Orthopaedic Association
+	$('#text5').click(function(){
+	   clear();
+	   $("#soa").css("display", "block");
+	});
+	$('#rect5').click(function(){
+	   clear();
+	   $("#soa").css("display", "block");
+	});
+
+//Western Orthopaedic Association
+	$('#text6').click(function(){
+	   clear();
+	   $("#woa").css("display", "block");
+	});
+	$('#rect6').click(function(){
+	   clear();
+	   $("#woa").css("display", "block");
+	});
+
+</script>
+
+<div id="container" style="width:575px; height:450px; float: left" ></div>
+<div style="float: right; width: 260px">
+	<div class="info" id="maininfo" style="display: block">
+				<div id="comarcaName"><h1>Board of Councilors</h1></div>
+				<div id="contentText" style="text-align:left"><pr>Each orthopaedic surgeon who serves on the Board of Councilors acts as your representative and liaison to the Academy. A Councilor's goal is to represent your opinions, ideas, suggestions, and seek input on issues that affect orthopaedic surgeons and their patients. Each Councilor is responsible for taking comments and suggestions and presenting them at one of their three meetings and encouraging the Academy to take action.</p><p>The Board of Councilors has played active roles in encouraging the Academy to pursue public advocacy efforts and have help to refine the algorithms review process allowing more input and comments on the algorithms. Your Councilor needs input on issues that are important to you. Without input and participation from the fellows, there is no guarantee that your voice will be heard.</p></div>
+
 	</div>
-                <!--
-================================================ 
-           MEMBERS: #
-================================================    
-                -->
-            <div class="info" id="coa">
-                                <div id="comarcaName">
-                    <iframe src="Places/- COA.html"  style="width:100%; height:400px;" scrolling="yes" frameborder="0" marginheight="0" marginwidth="0" >
-                    </iframe>
-                </div>
-            </div>
-                <!--
-================================================ 
-           MEMBERS: #
-================================================    
-                -->            <div class="info" id="eoa">
-                               <div id="comarcaName">
-                    <iframe src="Places/- EOA.html"  style="width:100%; height:400px;" scrolling="yes" frameborder="0" marginheight="0" marginwidth="0" >
-                    </iframe>
-                </div>
-            </div>
 
-                <!--
-================================================ 
-           MEMBERS: #
-================================================    
-                -->            <div class="info" id="maoa">
-                                <div id="comarcaName">
-                    <iframe src="Places/- MAOA.html"  style="width:100%; height:400px;" scrolling="yes" frameborder="0" marginheight="0" marginwidth="0" >
-                    </iframe>
-                </div>
-            </div>
-                <!--
-================================================ 
-           MEMBERS: #
-================================================    
-                -->
-            <div class="info" id="smos">
-                               <div id="comarcaName">
-                    <iframe src="Places/- SMOS.html"  style="width:100%; height:400px;" scrolling="yes" frameborder="0" marginheight="0" marginwidth="0" >
-                    </iframe>
-                </div>
-            </div>
-                <!--
-================================================ 
-           MEMBERS: #
-================================================    
-                -->
-            <div class="info" id="soa">
-                               <div id="comarcaName">
-                    <iframe src="Places/- SOA.html"  style="width:100%; height:400px;" scrolling="yes" frameborder="0" marginheight="0" marginwidth="0" >
-                    </iframe>
-                </div>
-            </div>
-                <!--
-================================================ 
-           MEMBERS: #
-================================================    
-                -->
-            <div class="info" id="woa">
-                                <div id="comarcaName">
-                    <iframe src="Places/- WOA.html"  style="width:100%; height:400px;" scrolling="yes" frameborder="0" marginheight="0" marginwidth="0" >
-                    </iframe>
-                </div>
-            </div>
-                <!--
-================================================ 
-           PUERTO RICO MEMBERS: ONE 
-================================================    
-                -->
-            <div class="info" id="pr">
-                                <div id="comarcaName">
-                    <iframe src="Places/PR.html"  style="width:100%; height:400px;" scrolling="yes" frameborder="0" marginheight="0" marginwidth="0" >
-                    </iframe>
-                </div>
-            </div>
-                <!--
-================================================ 
-           ALASKA MEMBERS: ONE 
-================================================    
---> 
-            <div class="info" id="us-ak">
-                               <div id="comarcaName">
-                    <iframe src="Places/AK.html"  style="width:100%; height:400px;" scrolling="yes" frameborder="0" marginheight="0" marginwidth="0" >
-                    </iframe>
-                </div>
-            </div>
-                <!--
-================================================ 
-           MEMBERS: #
-================================================    
-                -->
-            <div class="info" id="us-al">
-                                <div id="comarcaName">
-                    <iframe src="Places/AL.html"  style="width:100%; height:400px;" scrolling="yes" frameborder="0" marginheight="0" marginwidth="0" >
-                    </iframe>
-                </div>
-            </div>
-                <!--
-================================================ 
-           MEMBERS: #
-================================================    
-                -->
-            <div class="info" id="us-ar">
-                               <div id="comarcaName">
-                    <iframe src="Places/AR.html"  style="width:100%; height:400px;" scrolling="yes" frameborder="0" marginheight="0" marginwidth="0" >
-                    </iframe>
-                </div>
-            </div>
-                <!--
-================================================ 
-           MEMBERS: #
-================================================    
-                -->
-            <div class="info" id="us-az">
-                                <div id="comarcaName">
-                    <iframe src="Places/AZ.html"  style="width:100%; height:400px;" scrolling="yes" frameborder="0" marginheight="0" marginwidth="0" >
-                    </iframe>
-                </div>
-            </div>
-                <!--
-================================================ 
-           MEMBERS: #
-================================================    
-                -->
-            <div class="info" id="us-ca">
-                <div id="comarcaName">
-                    <iframe src="Places/CA.html"  style="width:100%; height:400px;" scrolling="yes" frameborder="0" marginheight="0" marginwidth="0" >
-                    </iframe>
-                </div>
-            </div>
-                <!--
-================================================ 
-           MEMBERS: #
-================================================    
-                -->
-            <div class="info" id="us-ct">
-                <div id="comarcaName">
+	<div class="info" id="coa">
+		<div id="comarcaName"></div>
+		<div id="contentText"><div id="infoEdifici">
+		<iframe src="boc/COA.html" style="width:100%;  height:450px;">
 
-                    <iframe src="Places/CT.html"  style="width:100%; height:400px;" scrolling="yes" frameborder="0" marginheight="0" marginwidth="0" >
+		</iframe>
+</div>
+		</div>
+	</div>
 
-                    </iframe>
-                </div>
-                <!--
-================================================ 
-           MEMBERS: #
-================================================    
-                -->
-            <div class="info" id="us-co">
-                                <div id="comarcaName">
-                    <iframe src="Places/CO.html"  style="width:100%; height:400px;" scrolling="yes" frameborder="0" marginheight="0" marginwidth="0" >
-                    </iframe>
-                </div>
-            </div>
-                <!--
-================================================ 
-           MEMBERS: #
-================================================    
-                -->
-            <div class="info" id="us-dc">
-                               <div id="comarcaName">
-                    <iframe src="Places/DC.html"  style="width:100%; height:400px;" scrolling="yes" frameborder="0" marginheight="0" marginwidth="0" >
-                    </iframe>
-                </div>
-            </div>
-                <!--
-================================================ 
-           MEMBERS: #
-================================================    
-                -->
-            <div class="info" id="us-de">
-                               <div id="comarcaName">
-                    <iframe src="Places/DE.html"  style="width:100%; height:400px;" scrolling="yes" frameborder="0" marginheight="0" marginwidth="0" >
-                    </iframe>
-                </div>
-            </div>
+    <div class="info" id="eoa">
+		<div id="comarcaName"></div>
+		<iframe src="boc/EOA.html" style="width:100%;  height:450px;">
 
-                <!--
-================================================ 
-           MEMBERS: #
-================================================    
-                -->            <div class="info" id="us-fl">
-                                <div id="comarcaName">
-                    <iframe src="Places/FL.html"  style="width:100%; height:400px;" scrolling="yes" frameborder="0" marginheight="0" marginwidth="0" >
-                    </iframe>
-                </div>
-            </div>
-                <!--
-================================================ 
-           MEMBERS: #
-================================================    
-                -->
-            <div class="info" id="us-ga">
-                                <div id="comarcaName">
-                    <iframe src="Places/GA.html"  style="width:100%; height:400px;" scrolling="yes" frameborder="0" marginheight="0" marginwidth="0" >
-                    </iframe>
-                </div>
-            </div>
-                <!--
-================================================ 
-           MEMBERS: #
-================================================    
-                -->
-            <div class="info" id="us-hi">
-                                <div id="comarcaName">
-                    <iframe src="Places/HI.html"  style="width:100%; height:400px;" scrolling="yes" frameborder="0" marginheight="0" marginwidth="0" >
-                    </iframe>
-                </div>
-            </div>
-                <!--
-================================================ 
-           MEMBERS: #
-================================================    
-                -->
-            <div class="info" id="us-id">
-                                <div id="comarcaName">
-                    <iframe src="Places/ID.html"  style="width:100%; height:400px;" scrolling="yes" frameborder="0" marginheight="0" marginwidth="0" >
-                    </iframe>
-                </div>
-            </div>
-                <!--
-================================================ 
-           MEMBERS: #
-================================================    
-                -->
-            <div class="info" id="us-il">
-                                <div id="comarcaName">
-                    <iframe src="Places/IL.html"  style="width:100%; height:400px;" scrolling="yes" frameborder="0" marginheight="0" marginwidth="0" >
-                    </iframe>
-                </div>
-            </div>
-                <!--
-================================================ 
-           MEMBERS: #
-================================================    
-                -->
-            <div class="info" id="us-in">
-                               <div id="comarcaName">
-                    <iframe src="Places/IN.html"  style="width:100%; height:400px;" scrolling="yes" frameborder="0" marginheight="0" marginwidth="0" >
-                    </iframe>
-                </div>
-            </div>
-                <!--
-================================================ 
-           MEMBERS: #
-================================================    
-                -->
-            <div class="info" id="us-ia">
-                                <div id="comarcaName">
-                    <iframe src="Places/IA.html"  style="width:100%; height:400px;" scrolling="yes" frameborder="0" marginheight="0" marginwidth="0" >
-                    </iframe>
-                </div>
-            </div>
-                <!--
-================================================ 
-           MEMBERS: #
-================================================    
-                -->            
-            <div class="info" id="us-ks">
-                                <div id="comarcaName">
-                    <iframe src="Places/KS.html"  style="width:100%; height:400px;" scrolling="yes" frameborder="0" marginheight="0" marginwidth="0" >
-                    </iframe>
-                </div>
-            </div>
-                <!--
-================================================ 
-           MEMBERS: #
-================================================    
-                -->
-            <div class="info" id="us-ky">
-                                <div id="comarcaName">
-                    <iframe src="Places/KY.html"  style="width:100%; height:400px;" scrolling="yes" frameborder="0" marginheight="0" marginwidth="0" >
-                    </iframe>
-                </div>
-            </div>
-                <!--
-================================================ 
-           MEMBERS: #
-================================================    
-                -->
-            <div class="info" id="us-la">
-                                <div id="comarcaName">
-                    <iframe src="Places/LA.html"  style="width:100%; height:400px;" scrolling="yes" frameborder="0" marginheight="0" marginwidth="0" >
-                    </iframe>
-                </div>
-            </div>
-                <!--
-================================================ 
-           MEMBERS: #
-================================================    
-                -->
-            <div class="info" id="us-ma">
-                               <div id="comarcaName">
-                    <iframe src="Places/MA.html"  style="width:100%; height:400px;" scrolling="yes" frameborder="0" marginheight="0" marginwidth="0" >
-                    </iframe>
-                </div>
-            </div>
-                <!--
-================================================ 
-           MEMBERS: #
-================================================    
-                -->
-            <div class="info" id="us-md">
-                                <div id="comarcaName">
-                    <iframe src="Places/MD.html"  style="width:100%; height:400px;" scrolling="yes" frameborder="0" marginheight="0" marginwidth="0" >
-                    </iframe>
-                </div>
-            </div>
-                <!--
-================================================ 
-           MEMBERS: #
-================================================    
-                -->
-            <div class="info" id="us-me">
-                                <div id="comarcaName">
-                    <iframe src="Places/ME.html"  style="width:100%; height:400px;" scrolling="yes" frameborder="0" marginheight="0" marginwidth="0" >
-                    </iframe>
-                </div>
-            </div>
-                <!--
-================================================ 
-           MEMBERS: #
-================================================    
-                -->
-            <div class="info" id="us-mi">
-                                <div id="comarcaName">
-                    <iframe src="Places/MI.html"  style="width:100%; height:400px;" scrolling="yes" frameborder="0" marginheight="0" marginwidth="0" >
-                    </iframe>
-                </div>
-            </div>
-                <!--
-================================================ 
-           MEMBERS: #
-================================================    
-                -->
-            <div class="info" id="us-mn">
-                                <div id="comarcaName">
-                    <iframe src="Places/MN.html"  style="width:100%; height:400px;" scrolling="yes" frameborder="0" marginheight="0" marginwidth="0" >
-                    </iframe>
-                </div>
-            </div>
-                <!--
-================================================ 
-           MEMBERS: #
-================================================    
-                -->
-            <div class="info" id="us-mo">
-                                <div id="comarcaName">
-                    <iframe src="Places/MO.html"  style="width:100%; height:400px;" scrolling="yes" frameborder="0" marginheight="0" marginwidth="0" >
-                    </iframe>
-                </div>
-            </div>
-                <!--
-================================================ 
-           MEMBERS: #
-================================================    
-                -->
-            <div class="info" id="us-ms">
-                               <div id="comarcaName">
-                    <iframe src="Places/MS.html"  style="width:100%; height:400px;" scrolling="yes" frameborder="0" marginheight="0" marginwidth="0" >
-                    </iframe>
-                </div>
-            </div>
-                <!--
-================================================ 
-           MEMBERS: #
-================================================    
-                -->
-            <div class="info" id="us-mt">
-                               <div id="comarcaName">
-                    <iframe src="Places/MT.html"  style="width:100%; height:400px;" scrolling="yes" frameborder="0" marginheight="0" marginwidth="0" >
-                    </iframe>
-                </div>
-            </div>
-                <!--
-================================================ 
-           MEMBERS: #
-================================================    
-                -->
-            <div class="info" id="us-nc">
-                                <div id="comarcaName">
-                    <iframe src="Places/NC.html"  style="width:100%; height:400px;" scrolling="yes" frameborder="0" marginheight="0" marginwidth="0" >
-                    </iframe>
-                </div>
-            </div>
-                <!--
-================================================ 
-           MEMBERS: #
-================================================    
-                -->
-            <div class="info" id="us-nd">
-                               <div id="comarcaName">
-                    <iframe src="Places/ND.html"  style="width:100%; height:400px;" scrolling="yes" frameborder="0" marginheight="0" marginwidth="0" >
-                    </iframe>
-                </div>
-            </div>
-                <!--
-================================================ 
-           MEMBERS: #
-================================================    
-                -->
-            <div class="info" id="us-ne">
-                                <div id="comarcaName">
-                    <iframe src="Places/NE.html"  style="width:100%; height:400px;" scrolling="yes" frameborder="0" marginheight="0" marginwidth="0" >
-                    </iframe>
-                </div>
-            </div>
-                <!--
-================================================ 
-           MEMBERS: #
-================================================    
-                -->
-            <div class="info" id="us-nj">
-                               <div id="comarcaName">
-                    <iframe src="Places/NJ.html"  style="width:100%; height:400px;" scrolling="yes" frameborder="0" marginheight="0" marginwidth="0" >
-                    </iframe>
-                </div>
-            </div>
-                <!--
-================================================ 
-           MEMBERS: #
-================================================    
-                -->
-            <div class="info" id="us-nh">
-                               <div id="comarcaName">
-                    <iframe src="Places/NH.html"  style="width:100%; height:400px;" scrolling="yes" frameborder="0" marginheight="0" marginwidth="0" >
-                    </iframe>
-                </div>
-            </div>
-                <!--
-================================================ 
-           MEMBERS: #
-================================================    
-                -->
-            <div class="info" id="us-nm">
-                                <div id="comarcaName">
-                    <iframe src="Places/NM.html"  style="width:100%; height:400px;" scrolling="yes" frameborder="0" marginheight="0" marginwidth="0" >
-                    </iframe>
-                </div>
-            </div>
-                <!--
-================================================ 
-           MEMBERS: #
-================================================    
-                -->
-            <div class="info" id="us-nv">
-                                <div id="comarcaName">
-                    <iframe src="Places/NV.html"  style="width:100%; height:400px;" scrolling="yes" frameborder="0" marginheight="0" marginwidth="0" >
-                    </iframe>
-                </div>
-            </div>
-                <!--
-================================================ 
-           MEMBERS: #
-================================================    
-                -->
-            <div class="info" id="us-ny">
-                                <div id="comarcaName">
-                    <iframe src="Places/NY.html"  style="width:100%; height:400px;" scrolling="yes" frameborder="0" marginheight="0" marginwidth="0" >
-                    </iframe>
-                </div>
-            </div>
-                <!--
-================================================ 
-           MEMBERS: #
-================================================    
-                -->
-            <div class="info" id="us-oh">
-                                <div id="comarcaName">
-                    <iframe src="Places/OH.html"  style="width:100%; height:400px;" scrolling="yes" frameborder="0" marginheight="0" marginwidth="0" >
-                    </iframe>
-                </div>
-            </div>
-                <!--
-================================================ 
-           MEMBERS: #
-================================================    
-                -->
-            <div class="info" id="us-ok">
-                                <div id="comarcaName">
-                    <iframe src="Places/OK.html"  style="width:100%; height:400px;" scrolling="yes" frameborder="0" marginheight="0" marginwidth="0" >
-                    </iframe>
-                </div>
-            </div>
-                <!--
-================================================ 
-           MEMBERS: #
-================================================    
-                -->
-            <div class="info" id="us-or">
-                               <div id="comarcaName">
-                    <iframe src="Places/OR.html"  style="width:100%; height:400px;" scrolling="yes" frameborder="0" marginheight="0" marginwidth="0" >
-                    </iframe>
-                </div>
-            </div>
-                <!--
-================================================ 
-           MEMBERS: #
-================================================    
-                -->
-            <div class="info" id="us-pa">
-                                <div id="comarcaName">
-                    <iframe src="Places/PA.html"  style="width:100%; height:400px;" scrolling="yes" frameborder="0" marginheight="0" marginwidth="0" >
-                    </iframe>
-                </div>
-            </div>
-                <!--
-================================================ 
-           MEMBERS: #
-================================================    
-                -->
-            <div class="info" id="us-ri">
-                                <div id="comarcaName">
-                    <iframe src="Places/RI.html"  style="width:100%; height:400px;" scrolling="yes" frameborder="0" marginheight="0" marginwidth="0" >
-                    </iframe>
-                </div>
-            </div>
-                <!--
-================================================ 
-           MEMBERS: #
-================================================    
-                -->
-            <div class="info" id="us-sc">
-                                <div id="comarcaName">
-                    <iframe src="Places/SC.html"  style="width:100%; height:400px;" scrolling="yes" frameborder="0" marginheight="0" marginwidth="0" >
-                    </iframe>
-                </div>
-            </div>
-                <!--
-================================================ 
-           MEMBERS: #
-================================================    
-                -->
-            <div class="info" id="us-sd">
-                               <div id="comarcaName">
-                    <iframe src="Places/SD.html"  style="width:100%; height:400px;" scrolling="yes" frameborder="0" marginheight="0" marginwidth="0" >
-                    </iframe>
-                </div>
-            </div>
-                <!--
-================================================ 
-           MEMBERS: #
-================================================    
-                -->
-            <div class="info" id="us-tn">
-                                <div id="comarcaName">
-                    <iframe src="Places/TN.html"  style="width:100%; height:400px;" scrolling="yes" frameborder="0" marginheight="0" marginwidth="0" >
-                    </iframe>
-                </div>
-            </div>
-                <!--
-================================================ 
-           MEMBERS: #
-================================================    
-                -->
-            <div class="info" id="us-tx">
-                                <div id="comarcaName">
-                    <iframe src="Places/TX.html"  style="width:100%; height:400px;" scrolling="yes" frameborder="0" marginheight="0" marginwidth="0" >
-                    </iframe>
-                </div>
-            </div>
-                <!--
-================================================ 
-           MEMBERS: #
-================================================    
-                -->
-            <div class="info" id="us-ut">
-                               <div id="comarcaName">
-                    <iframe src="Places/UT.html"  style="width:100%; height:400px;" scrolling="yes" frameborder="0" marginheight="0" marginwidth="0" >
-                    </iframe>
-                </div>
-            </div>
-                <!--
-================================================ 
-           MEMBERS: #
-================================================    
-                -->
-            <div class="info" id="us-va">
-                               <div id="comarcaName">
-                    <iframe src="Places/VA.html"  style="width:100%; height:400px;" scrolling="yes" frameborder="0" marginheight="0" marginwidth="0" >
-                    </iframe>
-                </div>
-            </div>
-                <!--
-================================================ 
-           MEMBERS: #
-================================================    
-                -->
-            <div class="info" id="us-vt">
-                                <div id="comarcaName">
-                    <iframe src="Places/VT.html"  style="width:100%; height:400px;" scrolling="yes" frameborder="0" marginheight="0" marginwidth="0" >
-                    </iframe>
-                </div>
-            </div>
-                <!--
-================================================ 
-           MEMBERS: #
-================================================    
-                -->
-            <div class="info" id="us-wa">
-                                <div id="comarcaName">
-                    <iframe src="Places/WA.html"  style="width:100%; height:400px;" scrolling="yes" frameborder="0" marginheight="0" marginwidth="0" >
-                    </iframe>
-                </div>
-            </div>
-                <!--
-================================================ 
-           MEMBERS: #
-================================================    
-                -->
-            <div class="info" id="us-wi">
-                                <div id="comarcaName">
-                    <iframe src="Places/WI.html"  style="width:100%; height:400px;" scrolling="yes" frameborder="0" marginheight="0" marginwidth="0" >
-                    </iframe>
-                </div>
-            </div>
-                <!--
-================================================ 
-           MEMBERS: #
-================================================    
-                -->
-            <div class="info" id="us-wv">
-                                <div id="comarcaName">
-                    <iframe src="Places/WV.html"  style="width:100%; height:400px;" scrolling="yes" frameborder="0" marginheight="0" marginwidth="0" >
-                    </iframe>
-                </div>
-            </div>
-                <!--
-================================================ 
-           MEMBERS: #
-================================================    
-                -->
-            <div class="info" id="us-wy">
-                                <div id="comarcaName">
-                    <iframe src="Places/WY.html"  style="width:100%; height:400px;" scrolling="yes" frameborder="0" marginheight="0" marginwidth="0" >
-                    </iframe>
-                </div>
-            </div>
-            </div>
-        </div>
-        <div style="position:relative; clear: both">
-            <iframe frameborder="0" height="47px" scrolling="no" src="logo.svg" style="position:absolute;right:0" width="487px"></iframe>
-        </div>
-    </div>
-    <script>
-        function clear() {
-            $(".info").css("display", "none")
-        }
+		</iframe>
+	</div>
 
-        // for block Canadian Orthopaedic Association
-        $('#text1').click(function() {
-            clear();
-            $("#coa").css("display", "block");
-        });
-        $('#rect1').click(function() {
-            clear();
-            $("#coa").css("display", "block");
-        });
+	<div class="info" id="maoa">
+		<div id="comarcaName"></div>
+		<div id="contentText"><div id="infoEdifici">
+		<iframe src="boc/MAOA.html" style="width:100%;  height:450px;">
 
-        //Eastern Orthopaedic Association
-        $('#text2').click(function() {
-            clear();
-            $("#eoa").css("display", "block");
-        });
-        $('#rect2').click(function() {
-            clear();
-            $("#eoa").css("display", "block");
-        });
+		</iframe>
+</div>
+		</div>
+	</div>
 
-        //Mid-America Orthopaedic Association
-        $('#text3').click(function() {
-            clear();
-            $("#maoa").css("display", "block");
-        });
-        $('#rect3').click(function() {
-            clear();
-            $("#maoa").css("display", "block");
-        });
+	<div class="info" id="smos">
+		<div id="comarcaName"></div>
+		<div id="contentText"><div id="infoEdifici">
+		<iframe src="boc/SMOS.html" style="width:100%;  height:450px;">
 
-        //Society of Military Orthopaedic Surgeons
-        $('#text4').click(function() {
-            clear();
-            $("#smos").css("display", "block");
-        });
-        $('#rect4').click(function() {
-            clear();
-            $("#smos").css("display", "block");
-        });
+		</iframe>
+</div>
+		</div>
+	</div>
 
-        //Southern Orthopaedic Association
-        $('#text5').click(function() {
-            clear();
-            $("#soa").css("display", "block");
-        });
-        $('#rect5').click(function() {
-            clear();
-            $("#soa").css("display", "block");
-        });
+	<div class="info" id="soa">
+		<div id="comarcaName"></div>
+		<div id="contentText"><div id="infoEdifici">
+		<iframe src="boc/SOA.html" style="width:100%;  height:450px;">
 
-        //Western Orthopaedic Association
-        $('#text6').click(function() {
-            clear();
-            $("#woa").css("display", "block");
-        });
-        $('#rect6').click(function() {
-            clear();
-            $("#woa").css("display", "block");
-        });
-    </script>
+		</iframe>
+</div>
+		</div>
+	</div>
+
+	<div class="info" id="woa">
+		<div id="comarcaName"></div>
+		<div id="contentText"><div id="infoEdifici">
+		<iframe src="boc/WOA.html" style="width:100%;  height:450px;">
+
+		</iframe>
+</div>
+		</div>
+	</div>
+
+	<div class="info" id="pr">
+		<div id="comarcaName"></div>
+		<div id="contentText"><div id="infoEdifici">
+		<iframe src="boc/PR.html" style="width:100%;  height:450px;">
+
+		</iframe>
+</div>
+		</div>
+	</div>
+
+	<div class="info" id="us-ak">
+		<div id="comarcaName"></div>
+		<div id="contentText"><div id="infoEdifici">
+		<iframe src="boc/AK.html" style="width:100%;  height:450px;">
+
+		</iframe>
+</div>
+		</div>
+	</div>
+
+	<div class="info" id="us-al">
+		<div id="comarcaName"></div>
+		<div id="contentText"><div id="infoEdifici">
+		<iframe src="boc/AL.html" style="width:100%;  height:450px;">
+
+		</iframe>
+</div>
+		</div>
+	</div>
+
+	<div class="info" id="us-ar">
+		<div id="comarcaName"></div>
+		<div id="contentText"><div id="infoEdifici">
+		<iframe src="boc/AR.html" style="width:100%;  height:450px;">
+
+		</iframe>
+</div>
+		</div>
+	</div>
+
+	<div class="info" id="us-az">
+		<div id="comarcaName"></div>
+		<div id="contentText"><div id="infoEdifici">
+		<iframe src="boc/AZ.html" style="width:100%;  height:450px;">
+
+		</iframe>
+</div>
+		</div>
+	</div>
+
+	<div class="info" id="us-ca">
+		<div id="comarcaName"></div>
+		<div id="contentText"><div id="infoEdifici">
+		<iframe src="boc/CA.html" style="width:100%;  height:450px;">
+
+		</iframe>
+</div>
+		</div>
+	</div>
+
+	<div class="info" id="us-ct">
+		<div id="comarcaName"></div>
+		<div id="contentText"><div id="infoEdifici">
+		<iframe src="boc/CA.html" style="width:100%;  height:450px;">
+
+		</iframe>
+</div>
+		</div>
+	</div>
+
+	<div class="info" id="us-co">
+		<div id="comarcaName"></div>
+		<div id="contentText"><div id="infoEdifici">
+		<iframe src="boc/CO.html" style="width:100%;  height:450px;">
+
+		</iframe>
+</div>
+		</div>
+	</div>
+
+	<div class="info" id="us-dc">
+		<div id="comarcaName"></div>
+		<div id="contentText"><div id="infoEdifici">
+		<iframe src="boc/DC.html" style="width:100%;  height:450px;">
+
+		</iframe>
+</div>
+		</div>
+	</div>
+
+	<div class="info" id="us-de">
+		<div id="comarcaName"></div>
+		<div id="contentText"><div id="infoEdifici">
+		<iframe src="boc/DE.html" style="width:100%;  height:450px;">
+
+		</iframe>
+</div>
+		</div>
+	</div>
+
+	<div class="info" id="us-fl">
+		<div id="comarcaName"></div>
+		<div id="contentText"><div id="infoEdifici">
+		<iframe src="boc/FL.html" style="width:100%;  height:450px;">
+
+		</iframe>
+</div>
+		</div>
+	</div>
+
+	<div class="info" id="us-ga">
+		<div id="comarcaName"></div>
+		<div id="contentText"><div id="infoEdifici">
+		<iframe src="boc/GA.html" style="width:100%;  height:450px;">
+
+		</iframe>
+</div>
+		</div>
+	</div>
+
+	<div class="info" id="us-hi">
+		<div id="comarcaName"></div>
+		<div id="contentText"><div id="infoEdifici">
+		<iframe src="boc/HI.html" style="width:100%;  height:450px;">
+
+		</iframe>
+</div>
+		</div>
+	</div>
+
+	<div class="info" id="us-ia">
+		<div id="comarcaName"></div>
+		<div id="contentText"><div id="infoEdifici">
+		<iframe src="boc/IA.html" style="width:100%;  height:450px;">
+
+		</iframe>
+</div>
+		</div>
+	</div>
+
+	<div class="info" id="us-id">
+		<div id="comarcaName"></div>
+		<div id="contentText"><div id="infoEdifici">
+		<iframe src="boc/ID.html" style="width:100%;  height:450px;">
+
+		</iframe>
+</div>
+		</div>
+	</div>
+
+	<div class="info" id="us-il">
+		<div id="comarcaName"></div>
+		<div id="contentText"><div id="infoEdifici">
+		<iframe src="boc/IL.html" style="width:100%;  height:450px;">
+
+		</iframe>
+</div>
+		</div>
+	</div>
+
+	<div class="info" id="us-in">
+		<div id="comarcaName"></div>
+		<div id="contentText"><div id="infoEdifici">
+		<iframe src="boc/IN.html" style="width:100%;  height:450px;">
+
+		</iframe>
+</div>
+		</div>
+	</div>
+
+	<div class="info" id="us-ks">
+		<div id="comarcaName"></div>
+		<div id="contentText"><div id="infoEdifici">
+		<iframe src="boc/KS.html" style="width:100%;  height:450px;">
+
+		</iframe>
+</div>
+		</div>
+	</div>
+
+	<div class="info" id="us-ky">
+		<div id="comarcaName"></div>
+		<div id="contentText"><div id="infoEdifici">
+		<iframe src="boc/KY.html" style="width:100%;  height:450px;">
+
+		</iframe>
+</div>
+		</div>
+	</div>
+
+	<div class="info" id="us-la">
+		<div id="comarcaName"></div>
+		<div id="contentText"><div id="infoEdifici">
+		<iframe src="boc/LA.html" style="width:100%;  height:450px;">
+
+		</iframe>
+</div>
+		</div>
+	</div>
+
+	<div class="info" id="us-ma">
+		<div id="comarcaName"></div>
+		<div id="contentText"><div id="infoEdifici">
+		<iframe src="boc/MA.html" style="width:100%;  height:450px;">
+
+		</iframe>
+</div>
+		</div>
+	</div>
+
+	<div class="info" id="us-md">
+		<div id="comarcaName"></div>
+		<div id="contentText"><div id="infoEdifici">
+		<iframe src="boc/MD.html" style="width:100%;  height:450px;">
+
+		</iframe>
+</div>
+		</div>
+	</div>
+
+	<div class="info" id="us-me">
+		<div id="comarcaName"></div>
+		<div id="contentText"><div id="infoEdifici">
+		<iframe src="boc/ME.html" style="width:100%;  height:450px;">
+
+		</iframe>
+</div>
+		</div>
+	</div>
+
+	<div class="info" id="us-mi">
+		<div id="comarcaName"></div>
+		<div id="contentText"><div id="infoEdifici">
+		<iframe src="boc/MI.html" style="width:100%;  height:450px;">
+
+		</iframe>
+</div>
+		</div>
+	</div>
+
+	<div class="info" id="us-mn">
+		<div id="comarcaName"></div>
+		<div id="contentText"><div id="infoEdifici">
+		<iframe src="boc/MN.html" style="width:100%;  height:450px;">
+
+		</iframe>
+</div>
+		</div>
+	</div>
+
+	<div class="info" id="us-mo">
+		<div id="comarcaName"></div>
+		<div id="contentText"><div id="infoEdifici">
+		<iframe src="boc/MO.html" style="width:100%;  height:450px;">
+
+		</iframe>
+</div>
+		</div>
+	</div>
+
+	<div class="info" id="us-ms">
+		<div id="comarcaName"></div>
+		<div id="contentText"><div id="infoEdifici">
+		<iframe src="boc/MS.html" style="width:100%;  height:450px;">
+
+		</iframe>
+</div>
+		</div>
+	</div>
+
+	<div class="info" id="us-mt">
+		<div id="comarcaName"></div>
+		<div id="contentText"><div id="infoEdifici">
+		<iframe src="boc/MT.html" style="width:100%;  height:450px;">
+
+		</iframe>
+</div>
+		</div>
+	</div>
+
+	<div class="info" id="us-nc">
+		<div id="comarcaName"></div>
+		<div id="contentText"><div id="infoEdifici">
+		<iframe src="boc/NC.html" style="width:100%;  height:450px;">
+
+		</iframe>
+</div>
+		</div>
+	</div>
+
+	<div class="info" id="us-nd">
+		<div id="comarcaName"></div>
+		<div id="contentText"><div id="infoEdifici">
+		<iframe src="boc/ND.html" style="width:100%;  height:450px;">
+
+		</iframe>
+</div>
+		</div>
+	</div>
+
+	<div class="info" id="us-ne">
+		<div id="comarcaName"></div>
+		<div id="contentText"><div id="infoEdifici">
+		<iframe src="boc/NE.html" style="width:100%;  height:450px;">
+
+		</iframe>
+</div>
+		</div>
+	</div>
+
+	<div class="info" id="us-nj">
+		<div id="comarcaName"></div>
+		<div id="contentText"><div id="infoEdifici">
+		<iframe src="boc/NJ.html" style="width:100%;  height:450px;">
+
+		</iframe>
+</div>
+		</div>
+	</div>
+
+	<div class="info" id="us-nh">
+		<div id="comarcaName"></div>
+		<div id="contentText"><div id="infoEdifici">
+		<iframe src="boc/NH.html" style="width:100%;  height:450px;">
+
+		</iframe>
+</div>
+		</div>
+	</div>
+
+	<div class="info" id="us-nm">
+		<div id="comarcaName"></div>
+		<div id="contentText"><div id="infoEdifici">
+		<iframe src="boc/NM.html" style="width:100%;  height:450px;">
+
+		</iframe>
+</div>
+		</div>
+	</div>
+
+	<div class="info" id="us-nv">
+		<div id="comarcaName"></div>
+		<div id="contentText"><div id="infoEdifici">
+		<iframe src="boc/NV.html" style="width:100%;  height:450px;">
+
+		</iframe>
+</div>
+		</div>
+	</div>
+
+	<div class="info" id="us-ny">
+		<div id="comarcaName"></div>
+		<div id="contentText"><div id="infoEdifici">
+		<iframe src="boc/NY.html" style="width:100%;  height:450px;">
+
+		</iframe>
+</div>
+		</div>
+	</div>
+
+	<div class="info" id="us-oh">
+		<div id="comarcaName"></div>
+		<div id="contentText"><div id="infoEdifici">
+		<iframe src="boc/OH.html" style="width:100%;  height:450px;">
+
+		</iframe>
+</div>
+		</div>
+	</div>
+
+	<div class="info" id="us-ok">
+		<div id="comarcaName"></div>
+		<div id="contentText"><div id="infoEdifici">
+		<iframe src="boc/OK.html" style="width:100%;  height:450px;">
+
+		</iframe>
+</div>
+		</div>
+	</div>
+
+	<div class="info" id="us-or">
+		<div id="comarcaName"></div>
+		<div id="contentText"><div id="infoEdifici">
+		<iframe src="boc/OR.html" style="width:100%;  height:450px;">
+
+		</iframe>
+</div>
+		</div>
+	</div>
+
+	<div class="info" id="us-pa">
+		<div id="comarcaName"></div>
+		<div id="contentText"><div id="infoEdifici">
+		<iframe src="boc/PA.html" style="width:100%;  height:450px;">
+
+		</iframe>
+</div>
+		</div>
+	</div>
+
+	<div class="info" id="us-ri">
+		<div id="comarcaName"></div>
+		<div id="contentText"><div id="infoEdifici">
+		<iframe src="boc/RI.html" style="width:100%;  height:450px;">
+
+		</iframe>
+</div>
+		</div>
+	</div>
+
+	<div class="info" id="us-sc">
+		<div id="comarcaName"></div>
+		<div id="contentText"><div id="infoEdifici">
+		<iframe src="boc/SC.html" style="width:100%;  height:450px;">
+
+		</iframe>
+</div>
+		</div>
+	</div>
+
+	<div class="info" id="us-sd">
+		<div id="comarcaName"></div>
+		<div id="contentText"><div id="infoEdifici">
+		<iframe src="boc/SD.html" style="width:100%;  height:450px;">
+
+		</iframe>
+</div>
+		</div>
+	</div>
+
+	<div class="info" id="us-tn">
+		<div id="comarcaName"></div>
+		<div id="contentText"><div id="infoEdifici">
+		<iframe src="boc/TN.html" style="width:100%;  height:450px;">
+
+		</iframe>
+</div>
+		</div>
+	</div>
+
+	<div class="info" id="us-tx">
+		<div id="comarcaName"></div>
+		<div id="contentText"><div id="infoEdifici">
+		<iframe src="boc/TX.html" style="width:100%;  height:450px;">
+
+		</iframe>
+</div>
+		</div>
+	</div>
+
+	<div class="info" id="us-ut">
+		<div id="comarcaName"></div>
+		<div id="contentText"><div id="infoEdifici">
+		<iframe src="boc/UT.html" style="width:100%;  height:450px;">
+
+		</iframe>
+</div>
+		</div>
+	</div>
+
+	<div class="info" id="us-va">
+		<div id="comarcaName"></div>
+		<div id="contentText"><div id="infoEdifici">
+		<iframe src="boc/VA.HTML" style="width:100%;  height:450px;">
+
+		</iframe>
+</div>
+		</div>
+	</div>
+
+	<div class="info" id="us-vt">
+		<div id="comarcaName"></div>
+		<div id="contentText"><div id="infoEdifici">
+		<iframe src="boc/VT.html" style="width:100%;  height:450px;">
+
+		</iframe>
+</div>
+		</div>
+	</div>
+
+	<div class="info" id="us-wa">
+		<div id="comarcaName"></div>
+		<div id="contentText"><div id="infoEdifici">
+		<iframe src="boc/WA.html" style="width:100%;  height:450px;">
+
+		</iframe>
+</div>
+		</div>
+	</div>
+
+	<div class="info" id="us-wi">
+		<div id="comarcaName"></div>
+		<div id="contentText"><div id="infoEdifici">
+		<iframe src="boc/WI.html" style="width:100%;  height:450px;">
+
+		</iframe>
+</div>
+		</div>
+	</div>
+
+	<div class="info" id="us-wv">
+		<div id="comarcaName"></div>
+		<div id="contentText"><div id="infoEdifici">
+		<iframe src="boc/WV.html" style="width:100%;  height:450px;">
+
+		</iframe>
+</div>
+		</div>
+	</div>
+
+	<div class="info" id="us-wy">
+		<div id="comarcaName"></div>
+		<div id="contentText"><div id="infoEdifici">
+		<iframe src="boc/WY.html" style="width:100%;  height:450px;">
+
+		</iframe>
+</div>
+		</div>
+	</div>
+
+</div>
+
+</div>
+
+
+	<div style="position:relative; clear: both">
+	  <iframe src="logo.svg" frameborder="0" scrolling="no" height="47px" width="487px" style="position:absolute;center:0"></iframe>
+	</div>
+
 </body>
-
 </html>

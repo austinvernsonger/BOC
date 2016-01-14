@@ -38,7 +38,7 @@ body {
 	color: #5554;
 }
 h1 {
-	font-size: 16px;
+	font-size: 25px;
 	padding: 30px 0 10px;
 }
 p {
@@ -54,7 +54,7 @@ a:hover {
 }
 
 #container {
-	margin:10px auto;
+	margin:20px auto;
 
 }
 
@@ -65,7 +65,7 @@ a:hover {
 }
 
 .description strong {
-	padding: 5px;
+	padding: 10px;
 }
 
 .tabs input[type=radio] {
@@ -74,31 +74,35 @@ a:hover {
           left: -9999px;
       }
       .tabs {
-        max-width: 600px;
+        max-width: 650px;
         width:100%;
         float: none;
         list-style: none;
         position: relative;
         padding: 0;
-        margin: 10px auto;
+        margin: 75px auto;
       }
       .tabs li{
         float: left;
       }
+
 .tabs label {
           display: block;
-          padding: 20px 20px;
-          border-radius: 1px 1px 0 0;
+          padding: 10px 20px;
+          border-radius: 2px 2px 0 0;
           color: #08C;
-          font-size: 8px;
-          font-weight: bold;
+          font-size: 24px;
+          font-weight: normal;
   
       font-family: verdana, helveti;
           background: rgba(255,255,255,0.2);
           cursor: pointer;
           position: relative;
-          top: 2px;
-
+          top: 3px;
+          -webkit-transition: all 0.2s ease-in-out;
+          -moz-transition: all 0.2s ease-in-out;
+          -o-transition: all 0.2s ease-in-out;
+          transition: all 0.2s ease-in-out;
       }
       .tabs label:hover {
         background: rgba(255,255,255,0.5);
@@ -119,44 +123,45 @@ a:hover {
         display: none;
         text-align: left;
         width: 100%;
-        font-size: 10px;
+        font-size: 15px;
         line-height: 140%;
         padding-top: 10px;
         background: #e5e5e5;
-        padding: 5px;
+        padding: 15px;
         color: #222;
         position: absolute;
-        top: 45px;
+        top: 53px;
         left: 0;
         box-sizing: border-box;
+        -webkit-animation-duration: 0.5s;
+        -o-animation-duration: 0.5s;
+        -moz-animation-duration: 0.5s;
+        animation-duration: 0.5s;
       }
-	  
-	  
-	  
-	  
+
 .info{
    display: none;
-   margin-top: 5px;
+   margin-top: 10px;
 
 	float:right;
-	width:480px;
-	height:400px;
+	width:400px;
+	height:460px;
 	/*overflow: auto;*/
 
  	/* Size and position */
-    padding: 0px;
+    padding: 10px;
+	margin; 25px;
 
     /* Styles */
     background: #fff;
-    border-radius: 3px;
-    border: 2px solid rgba(0,0,0,0.15);
-    box-shadow: 0 1px 1px rgba(50,50,50,0.1);
+    border-radius: 1px;
     cursor: pointer;
     outline: none;
 
     /* Font settings */
-    font-weight: normal;
+    font-weight: bold;
     color: black;
+	font-size: 14px;
 }
 
 .llistat-edificis {
@@ -169,7 +174,7 @@ a:hover {
     list-style: none;
 
     /* Hiding */
-    pointer-events: auto;
+    pointer-events: none;
 }
 
 .llistat-edificis li a {
@@ -177,7 +182,7 @@ a:hover {
     padding: 2px;
     width: 100%;
     text-align: left;
-    margin-left: 5px;
+    margin-left: 10px;
     text-decoration: none;
     color: #8aa8bd;
 }
@@ -188,6 +193,6 @@ a:hover {
    margin-right: 15px;
 }
 
-iframe {
-    overflow-x:hidden;
-}
+  iframe {
+    border: 0;
+  }
